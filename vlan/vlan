@@ -8,12 +8,12 @@ depend() {
 
 start() {
 	ebegin "Adding VLANs"
-	/usr/local/bin/vlan.sh -i "10 20" ens18
+	/usr/local/bin/vlan.sh -i "10 20" eth0
 	eend $?
 }
 
 stop() {
 	ebegin "Removing VLANs"
-	/usr/local/bin/vlan.sh -d -i "10 20" ens18
+	/usr/local/bin/vlan.sh -d -i "10 20" eth0
 	eend $?
 }
