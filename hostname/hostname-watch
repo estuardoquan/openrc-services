@@ -1,0 +1,7 @@
+#!/sbin/openrc-run
+
+description="hostname-watch"
+
+supervisor=supervise-daemon
+command=/sbin/inotifyd
+command_args="/usr/local/bin/hostname-change.sh /etc/hostname:cewDM"
